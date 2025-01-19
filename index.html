@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Interactive Quiz Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Timer is now outside the quiz-container for better visibility -->
+  <div id="timer" class="timer">
+    <span id="time">30</span>s
+  </div>
+  
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Quiz Challenge</h1>
+      <div class="progress">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div class="quiz-content">
+      <div id="question" class="question">Question text will appear here</div>
+      <div id="choices" class="choices"></div>
+      <div class="controls">
+        <button id="next-btn" class="btn" disabled>Next</button>
+      </div>
+    </div>
+    <!-- Report at the end of the quiz -->
+    <div id="score-container" class="score-container hidden">
+      <div class="score-card">
+        <h2>Quiz Completed!</h2>
+        <p>Your score: <span id="final-score"></span> / <span id="total-questions"></span></p>
+        <p><strong>Correct Answers:</strong> <span id="correct-answers"></span></p>
+        <p><strong>Wrong Answers:</strong> <span id="wrong-answers"></span></p>
+        <p><strong>Total Time Taken:</strong> <span id="total-time"></span> seconds</p>
+        <button id="restart-btn" class="btn">Retake Quiz</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
